@@ -7,10 +7,10 @@ const theme: DefaultTheme = {}
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Router root={(props) => <Suspense>{props.children}</Suspense>}>
-        <FileRoutes />
-      </Router>
-    </ThemeProvider>
+    //<ThemeProvider theme={theme}>
+    <Router root={(props) => <Suspense>{props.children}</Suspense>}>
+      <FileRoutes />
+    </Router>
+    // </ThemeProvider>
   )
 }
