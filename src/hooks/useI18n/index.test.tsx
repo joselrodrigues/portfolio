@@ -1,3 +1,4 @@
+import { flatten } from "@solid-primitives/i18n"
 import { createRoot } from "solid-js"
 
 import { Locale, useI18n } from "."
@@ -8,10 +9,16 @@ vi.mock("@solid-primitives/i18n", () => ({
 }))
 
 describe("useI18n", () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
   it("should locale be default to en", () => {
     createRoot(() => {
       const { locale } = useI18n()
       expect(locale()).toBe("en")
+
+      expect(flatten).toHaveBeenCalledTimes(1)
     })
   })
 
@@ -47,6 +54,7 @@ describe("useI18n", () => {
   it("should translate keys using the t function", () => {
     createRoot(() => {
       const { t } = useI18n()
+
       const expectedTranslation = "components.login.passwordLabel"
 
       const result = t("components.login.passwordLabel")
