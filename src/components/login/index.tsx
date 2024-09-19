@@ -1,6 +1,6 @@
 import { SubmitHandler, createForm, valiForm } from "@modular-forms/solid"
 
-import { useI18n } from "../hooks/useI18n"
+import { useI18n } from "~/hooks/useI18n"
 import { LoginForm, LoginSchema } from "./index.schema"
 import { FieldContainer, FormContainer } from "./index.styles"
 

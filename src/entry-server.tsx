@@ -1,5 +1,5 @@
 // @refresh reload
-import { createHandler, StartServer } from "@solidjs/start/server"
+import { StartServer, createHandler } from "@solidjs/start/server"
 import { ThemeProvider } from "solid-styled-components"
 
 export default createHandler(() => (

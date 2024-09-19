@@ -5,9 +5,11 @@
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
-    "test": "vitest --config ./vitest.config.ts",
     "lint": "eslint --fix",
-    "coverage": "vitest --coverage"
+    "test:run": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "@modular-forms/solid": "^0.23.0",
@@ -15,7 +17,6 @@
     "@solidjs/router": "^0.14.5",
     "@solidjs/start": "^1.0.6",
     "solid-js": "^1.8.18",
-    "solid-styled-components": "^0.28.5",
     "valibot": "^0.42.0",
     "vinxi": "^0.4.1"
   },
@@ -37,7 +38,9 @@
     "globals": "^15.9.0",
     "jsdom": "^25.0.0",
     "prettier": "3.3.3",
+    "style-dictionary": "^4.1.2",
     "typescript-eslint": "^8.5.0",
+    "vite-plugin-solid": "^2.10.2",
     "vitest": "^2.1.1"
   }
 }
